@@ -5,7 +5,7 @@
     //See the "welcome" module for an example of function export.
 
     return {
-        displayName: 'Twitter',
+        displayName: 'Apps - Twitter',
 
         activate: function () {
 

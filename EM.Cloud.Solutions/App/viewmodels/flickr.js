@@ -14,7 +14,7 @@
             }
 
             var that = this;
-            return http.jsonp('http://api.flickr.com/services/feeds/photos_public.gne', { tags: 'mount ranier', tagmode: 'any', format: 'json' }, 'jsoncallback').then(function(response) {
+            return http.jsonp('http://api.flickr.com/services/feeds/photos_public.gne', { tags: 'ireland', tagmode: 'any', format: 'json' }, 'jsoncallback').then(function(response) {
                 that.images(response.items);
             });
         },
@@ -24,9 +24,9 @@
             item.viewUrl = 'views/detail';
             app.showDialog(item);
         },
-        canDeactivate: function () {
-            //the router's activator calls this function to see if it can leave the screen
-            return app.showMessage('Are you sure you want to leave this page?', 'Navigate', ['Yes', 'No']);
-        }
+        //canDeactivate: function () {
+        //    //the router's activator calls this function to see if it can leave the screen
+        //    //return app.showMessage('Are you sure you want to leave this page?', 'Navigate', ['Yes', 'No']);
+        //}
     };
 });
